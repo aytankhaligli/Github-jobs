@@ -1,0 +1,99 @@
+.job-card {
+  width: 79rem;
+  height: 11.4rem;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.job-img {
+  width: 9rem;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 1.6rem;
+  align-self: center;
+}
+.logo {
+  width: 100%;
+}
+.job-description {
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #334680;
+  gap: 1.2rem;
+}
+.job-firma {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.job-name {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.job-full {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #334680;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.card-corner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  margin-top: auto;
+  gap: 2.8rem;
+}
+.job-location,
+.job-date {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #b7bcce;
+}
+.job-globe-icon,
+.job-clock-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.footer {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #b9bdcf;
+  margin-top: 15rem;
+}
+.dev-name {
+  text-decoration: underline;
+}
+.pagination {
+  display: flex;
+  gap: 1.2rem;
+}
+.page-number {
+  height: 3.6rem;
+  width: 3.6rem;
+  border: 1px solid #b7bcce;
+  color: #b7bcce;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s bezier;
+}
+.page-number:hover {
+  border-color: #1e86ff;
+  color: #1e86ff;
+}

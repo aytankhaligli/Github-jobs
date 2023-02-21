@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  margin-bottom: 1rem;
+}
+.title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  color: #334680;
+}
+.job-box {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-top: 3.5rem;
+  margin-bottom: 3.2rem;
+}
+.img {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.name {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #334680;
+}
+.text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  /* or 24px */
+
+  color: #334680;
+}

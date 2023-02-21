@@ -1,0 +1,84 @@
+.sidebar {
+  width: 38rem;
+  margin-right: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 4.4rem;
+}
+.fulltime-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.2rem;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+.fulltime-input {
+  border: 1px solid #b9bdcf;
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+}
+.fulltime-label {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #334680;
+}
+.location-label {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #b9bdcf;
+}
+.location-searchbar {
+  position: relative;
+  margin-top: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+.globe-icon {
+  position: absolute;
+  left: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+}
+.location-input {
+  width: 379px;
+  height: 48px;
+  padding-left: 4.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+}
+.location-input::placeholder {
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  color: #b9bdcf;
+}
+.city-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.list-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #334680;
+}
+.city-input {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #b9bdcf;
+}
+.city-label {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #334680;
+}
