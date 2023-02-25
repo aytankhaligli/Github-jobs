@@ -7,8 +7,10 @@ import AboutPage from "./routes/AboutPage";
 function App() {
   const [jobData, setJobData] = useState("");
   const [page, setPage] = useState(1);
-  const [viewData, setViewData] = useState([]);
+  const [viewData, setViewData] = useState("");
   const [inputData, setInputData] = useState("");
+  const [isFullTime, setIsFullTime] = useState(false);
+  const [inputCity, setInputCity] = useState("");
 
   useEffect(() => {
     const getData = async () => {
@@ -24,14 +26,35 @@ function App() {
   }, []);
 
   let pages = [];
-  for (let i = 1; i <= jobData.length / 5; i++) {
-    pages.push(i);
+  if (viewData?.length < 5) {
+    pages.push(1);
+  } else {
+    for (let i = 1; i <= jobData.length / 5; i++) {
+      pages.push(i);
+    }
   }
 
-  // console.log(viewData);
   useEffect(() => {
-    setViewData(jobData.slice(5 * page - 5, 5 * page));
-  }, [page, jobData]);
+    let filterData;
+    if (isFullTime && !inputCity) {
+      filterData = jobData.filter((job) => job.fulltime === "true");
+    } else if (!isFullTime && !!inputCity) {
+      filterData = jobData.filter(
+        (job) => job.city.toLowerCase() === inputCity.toLowerCase()
+      );
+    } else if (isFullTime && !!inputCity) {
+      filterData = jobData.filter((job) => {
+        return (
+          job.fulltime === "true" &&
+          job.city.toLowerCase() === inputCity.toLowerCase()
+        );
+      });
+    } else {
+      filterData = jobData.slice(5 * page - 5, 5 * page);
+    }
+    console.log(filterData);
+    setViewData(filterData);
+  }, [page, jobData, isFullTime, inputCity]);
 
   const jobElement =
     viewData &&
@@ -68,10 +91,11 @@ function App() {
 
   function searchJob() {
     const searchResult = jobData.filter(
-      (job) => job.name === inputData || job.title === inputData
+      (job) =>
+        job.name.toLowerCase() === inputData.toLowerCase() ||
+        job.title.toLowerCase() === inputData.toLowerCase()
     );
     setViewData(searchResult);
-    console.log(searchResult);
   }
 
   return (
@@ -89,6 +113,10 @@ function App() {
               inputData={inputData}
               setInputData={setInputData}
               searchJob={searchJob}
+              isFullTime={isFullTime}
+              setIsFullTime={setIsFullTime}
+              inputCity={inputCity}
+              setInputCity={setInputCity}
             />
           }
         />

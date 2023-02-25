@@ -11,7 +11,12 @@ export default function Dashboard({
   inputData,
   setInputData,
   searchJob,
+  isFullTime,
+  setInputCity,
+  setIsFullTime,
+  inputCity,
 }) {
+  // console.log(jobElement);
   return (
     <>
       <Searchbar
@@ -20,18 +25,27 @@ export default function Dashboard({
         searchJob={searchJob}
       />
       <main className="main">
-        <Sidebar />
+        <Sidebar
+          isFullTime={isFullTime}
+          setIsFullTime={setIsFullTime}
+          inputCity={inputCity}
+          setInputCity={setInputCity}
+        />
         <div className="jobs">
           {jobElement}
-          <div className="pagination">
-            <div className="page-number">
-              <img src={arrowBack} alt="arrow-back icon" />
+          {jobElement?.length ? (
+            <div className="pagination">
+              <div className="page-number">
+                <img src={arrowBack} alt="arrow-back icon" />
+              </div>
+              {pageElement}
+              <div className="page-number">
+                <img src={arrowForward} alt="arrow-forward icon" />
+              </div>
             </div>
-            {pageElement}
-            <div className="page-number">
-              <img src={arrowForward} alt="arrow-forward icon" />
-            </div>
-          </div>
+          ) : (
+            <div className="no-match">Don't have any match!</div>
+          )}
         </div>
       </main>
     </>

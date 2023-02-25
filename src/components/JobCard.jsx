@@ -26,15 +26,15 @@ export default function JobCard({
         <p className="job-full" style={style}>
           Full time
         </p>
-      </div>
-      <div className="card-corner">
-        <div className="job-location">
-          <img src={globe} alt="globe icon" className="job-globe-icon" />
-          <p>{city}</p>
-        </div>
-        <div className="job-date">
-          <img src={clock} alt="globe icon" className="job-clock-icon" />
-          <p>{date}</p>
+        <div className="card-corner">
+          <div className="job-location">
+            <img src={globe} alt="globe icon" className="job-globe-icon" />
+            <p>{city}</p>
+          </div>
+          <div className="job-date">
+            <img src={clock} alt="globe icon" className="job-clock-icon" />
+            <p>{date}</p>
+          </div>
         </div>
       </div>
     </Link>

@@ -28,9 +28,12 @@ a {
   margin-bottom: 3.2rem;
 }
 .main {
+  max-width: 120rem;
   display: flex;
 }
 .jobs {
+  /* max-width: 79rem; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,4 +68,71 @@ a {
 
 .job-info {
   margin-top: 4.2rem;
+}
+
+.no-match {
+  font-size: 2rem;
+  color: #ac0c0c;
+}
+
+@media (max-width: 75em) {
+  .App {
+    padding: 12rem 2.4rem;
+  }
+}
+
+@media (max-width: 63em) {
+  .main {
+    justify-content: space-between;
+  }
+  .job-name {
+    font-size: 1.6rem;
+  }
+  .card-corner {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 56em) {
+  .main {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .location-input {
+    width: 100%;
+  }
+  .search-box {
+    padding: 1.6rem;
+  }
+  .search-input {
+    width: 100%;
+  }
+  .job-card {
+    height: 14.7rem;
+    align-items: center;
+  }
+  .job-img {
+    align-self: start;
+  }
+  .job-description {
+    gap: 0;
+  }
+  .job-firma {
+    margin-bottom: 0.8rem;
+  }
+  .job-full {
+    margin-top: 1.4rem;
+  }
+  .card-corner {
+    position: static;
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 2.6rem;
+  }
+  form {
+    width: 100%;
+  }
 }
