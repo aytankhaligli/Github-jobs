@@ -1,7 +1,7 @@
 .search-box {
   max-width: 120rem;
   height: 13.8rem;
-  background-image: url(../src/assets/images/backgroundImg.png);
+  background-image: url(../../src/assets/images/backgroundImg.png);
   background-size: cover;
   display: flex;
   justify-content: center;
